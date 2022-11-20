@@ -1,24 +1,19 @@
-console.log('loaded!');
-// Core Types
-// number : 1, 5.3, -10        // All numbers, no differentiation between integers or floats
-// string : 'Hi', "Hi", `Hi`   // All text values
-// boolean: true, false        // Just these two, no "truthy" or "falsy" values
-function add(n1, n2, showResult, phrase) {
-    // NO. Can be solved with typescript
-    // if (typeof n1 !== 'number' || typeof n2 !== 'number'){
-    //   throw new Error('Incorrect input!')
-    // }
-    var result = n1 + n2;
-    if (showResult) {
-        console.log(phrase + result);
-    }
-    else {
-        return n1 + n2;
-    }
+// const person: {
+//   name: string;
+//   age: number;
+// } = {
+var person = {
+    name: "Maximilian",
+    age: 30,
+    hobbies: ['Sports', 'Cooking'],
+    role: [2, 'author']
+};
+person.role.push('admin');
+var favouriteActivities;
+favouriteActivities = ['Sports'];
+console.log(person.name);
+for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
+    var hobby = _a[_i];
+    console.log(hobby.toUpperCase());
+    // console.log(hobby.map()) // !!! ERROR !!!
 }
-var number1 = 5;
-var number2 = 2.5;
-var printResult = true;
-var resultPhrase = 'Result is: ';
-var result = add(number1, number2, printResult, resultPhrase);
-console.log(result);
